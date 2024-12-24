@@ -3,6 +3,8 @@ package cn.lunadeer.furnitureCoreApi.managers;
 import cn.lunadeer.furnitureCoreApi.models.FurnitureModel;
 import org.bukkit.NamespacedKey;
 
+import java.util.List;
+
 public abstract class ModelManager {
     protected static ModelManager instance;
 
@@ -27,6 +29,11 @@ public abstract class ModelManager {
      * @return model if found, null if not found
      */
     public abstract FurnitureModel getModel(String modelName);
+
+    /**
+     * Get all models
+     */
+    public abstract List<FurnitureModel> getModels();
 
     /**
      * Register a model and its recipe
