@@ -57,4 +57,18 @@ public interface FurnitureModel {
      * Get the recipe of the model
      */
     Map<NamespacedKey, CraftingRecipe> getRecipes();
+
+    /**
+     * Get if the model is effective
+     */
+    Boolean isEffect();
+
+    /**
+     * Get the path of the prefix
+     * <p>
+     * e.g. "foo/bar" "foo/foo/bar" "foo/bar/foo"
+     *
+     * @return the path of the prefix
+     */
+    String getPrefixPath();
 }
