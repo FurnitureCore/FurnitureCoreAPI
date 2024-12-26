@@ -71,4 +71,18 @@ public interface FurnitureModel {
      * @return the path of the prefix
      */
     String getPrefixPath();
+
+    /**
+     * If the model can rotate
+     *
+     * @return if the model can rotate
+     */
+    Boolean canRotate();
+
+    /**
+     * If the model can hanging
+     *
+     * @return if the model can hanging
+     */
+    Boolean canHanging();
 }
