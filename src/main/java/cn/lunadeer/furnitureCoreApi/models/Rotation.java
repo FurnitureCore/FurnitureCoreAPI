@@ -29,6 +29,11 @@ public enum Rotation {
         return angle;
     }
 
+    public Rotation next() {
+        int index = this.ordinal();
+        return values()[(index + 1) % values().length];
+    }
+
     public static Rotation fromYaw(float yaw) {
         // find the closest angle
         float angle = yaw % 360;
