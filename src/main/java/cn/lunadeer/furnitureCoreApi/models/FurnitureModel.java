@@ -1,6 +1,9 @@
 package cn.lunadeer.furnitureCoreApi.models;
 
 import org.bukkit.NamespacedKey;
+import org.bukkit.inventory.CraftingRecipe;
+
+import java.util.Map;
 
 public interface FurnitureModel {
     NamespacedKey getItemModelKey();
@@ -49,4 +52,9 @@ public interface FurnitureModel {
      * Unregister the recipe of the model
      */
     void unregisterRecipe();
+
+    /**
+     * Get the recipe of the model
+     */
+    Map<NamespacedKey, CraftingRecipe> getRecipes();
 }
