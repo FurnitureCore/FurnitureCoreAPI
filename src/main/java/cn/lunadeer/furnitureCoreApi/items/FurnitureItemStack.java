@@ -101,7 +101,12 @@ public class FurnitureItemStack extends ItemStack {
         setItemMeta(meta);
     }
 
-    public FurnitureModel getModel() {
+    /**
+     * Get the model of the furniture item.
+     *
+     * @return The model of the furniture item.
+     */
+    public @NotNull FurnitureModel getModel() {
         return model;
     }
 }
