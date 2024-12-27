@@ -18,10 +18,8 @@ public abstract class ResourcePackManager {
 
     /**
      * Load models from disk.
-     *
-     * @throws Exception if failed to load models
      */
-    public abstract void loadModelsFromDisk() throws Exception;
+    public abstract void loadModelsFromDisk();
 
     /**
      * Generate the resource pack.
