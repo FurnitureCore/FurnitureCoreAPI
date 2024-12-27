@@ -6,6 +6,11 @@ import org.bukkit.inventory.CraftingRecipe;
 import java.util.Map;
 
 public interface FurnitureModel {
+    /**
+     * Get the key of the model.
+     * <p>
+     * This was used to identify the model.
+     */
     NamespacedKey getItemModelKey();
 
     /**
@@ -44,19 +49,25 @@ public interface FurnitureModel {
     String getCallableNameWithNamespace();
 
     /**
-     * Register the recipe of the model
+     * Register the internal recipe of the model
+     * <p>
+     * Internal recipes are the recipes that made by the model author and contained in the model zip file.
      */
-    void registerRecipe();
+    void registerInternalRecipe();
 
     /**
-     * Unregister the recipe of the model
+     * Unregister the internal recipe of the model
+     * <p>
+     * Internal recipes are the recipes that made by the model author and contained in the model zip file.
      */
-    void unregisterRecipe();
+    void unregisterInternalRecipe();
 
     /**
-     * Get the recipe of the model
+     * Get the internal recipe of the model
+     * <p>
+     * Internal recipes are the recipes that made by the model author and contained in the model zip file.
      */
-    Map<NamespacedKey, CraftingRecipe> getRecipes();
+    Map<NamespacedKey, CraftingRecipe> getInternalRecipes();
 
     /**
      * Get if the model is effective
