@@ -13,6 +13,12 @@ import java.util.List;
 public class ScrewdriverItemStack extends ItemStack {
     private static final NamespacedKey pdcKey = new NamespacedKey("furniture_core", "tools/screwdriver");
 
+    public static Component displayName = Component.text("Screwdriver");
+    public static List<Component> lore = List.of(
+            Component.text("Left click to break furniture."),
+            Component.text("Right click to rotate furniture.")
+    );
+
     /**
      * Construct a Screwdriver item.
      */
@@ -53,13 +59,10 @@ public class ScrewdriverItemStack extends ItemStack {
 
     private void setItemMeta() {
         ItemMeta meta = getItemMeta();
-        meta.displayName(Component.text("Screwdriver"));
+        meta.displayName(displayName);
         meta.getPersistentDataContainer().set(pdcKey, PersistentDataType.INTEGER, 1);
         meta.setItemModel(pdcKey);
-        meta.lore(List.of(
-                Component.text("Left click to break furniture."),
-                Component.text("Right click to rotate furniture.")
-        ));
+        meta.lore(lore);
         setItemMeta(meta);
     }
 
