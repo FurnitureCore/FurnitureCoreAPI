@@ -14,20 +14,20 @@ public interface FurnitureModel {
     NamespacedKey getItemModelKey();
 
     /**
-     * Set the custom name of the model, generally used for display.
+     * Set the display name of the model, generally used for display.
      * <p>
      * If not set in the json file, the custom name will be the name of the model file.
      *
-     * @param customName the custom name of the model
+     * @param displayName the custom name of the model
      */
-    void setCustomName(String customName);
+    void setDisplayName(String displayName);
 
     /**
-     * Get the custom name of the model, generally used for display.
+     * Get the display name of the model, generally used for display.
      * <p>
      * If not set in the json file, the custom name will be the name of the model file.
      */
-    String getCustomName();
+    String getDisplayName();
 
     /**
      * Get the name of the model, which is the name of the json file

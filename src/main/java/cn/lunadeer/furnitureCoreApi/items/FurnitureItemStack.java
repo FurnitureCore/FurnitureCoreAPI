@@ -95,7 +95,7 @@ public class FurnitureItemStack extends ItemStack {
     private void setItemMeta(@NotNull FurnitureModel furnitureModel) {
         model = furnitureModel;
         ItemMeta meta = getItemMeta();
-        meta.displayName(Component.text(furnitureModel.getCustomName()));
+        meta.displayName(Component.text(furnitureModel.getDisplayName()));
         meta.getPersistentDataContainer().set(pdcKey, PersistentDataType.STRING, furnitureModel.getCallableNameWithNamespace());
         meta.setItemModel(model.getItemModelKey());
         setItemMeta(meta);
