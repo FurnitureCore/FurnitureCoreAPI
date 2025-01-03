@@ -1,5 +1,6 @@
 package cn.lunadeer.furnitureCoreApi.models;
 
+import cn.lunadeer.furnitureCoreApi.functionality.Functionality;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.CraftingRecipe;
 
@@ -96,4 +97,11 @@ public interface FurnitureModel {
      * @return if the model can hanging
      */
     Boolean canHanging();
+
+    /**
+     * Get the function of the model
+     *
+     * @return the function of the model
+     */
+    Functionality getFunction();
 }

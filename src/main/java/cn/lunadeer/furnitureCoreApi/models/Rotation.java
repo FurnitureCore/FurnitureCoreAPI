@@ -1,5 +1,7 @@
 package cn.lunadeer.furnitureCoreApi.models;
 
+import org.bukkit.util.Vector;
+
 public enum Rotation {
     R_0(0f),
     R_22_5(22.5f),
@@ -32,6 +34,10 @@ public enum Rotation {
     public Rotation next() {
         int index = this.ordinal();
         return values()[(index + 1) % values().length];
+    }
+
+    public Vector getDirection() {
+        return new Vector(Math.cos(Math.toRadians(angle)), 0, Math.sin(Math.toRadians(angle)));
     }
 
     public static Rotation fromYaw(float yaw) {
