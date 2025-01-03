@@ -25,7 +25,7 @@ public class FurniturePlacedEvent extends CancellableEvent{
     }
 
     public Location getLocation() {
-        return location;
+        return location.clone();
     }
 
 }

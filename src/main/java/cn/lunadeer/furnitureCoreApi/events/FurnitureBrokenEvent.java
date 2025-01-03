@@ -32,7 +32,7 @@ public class FurnitureBrokenEvent extends CancellableEvent{
     }
 
     public Location getLocation() {
-        return location;
+        return location.clone();
     }
 
 }

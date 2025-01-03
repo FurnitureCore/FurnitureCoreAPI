@@ -38,7 +38,7 @@ public class FurnitureRotatedEvent extends CancellableEvent {
     }
 
     public Location getLocation() {
-        return location;
+        return location.clone();
     }
 
     public Rotation getCurrentRotation() {
