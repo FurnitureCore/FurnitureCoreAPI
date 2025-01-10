@@ -25,12 +25,12 @@ public abstract class ResourcePackManager {
     public abstract void loadModelsFromDisk(CommandSender sender);
 
     /**
-     * Generate the resource pack.
+     * Regenerate the resource pack, and apply it to all players.
      *
      * @param sender the sender to send messages to
      * @throws Exception if failed to generate the resource pack
      */
-    public abstract void generateResourcePack(CommandSender sender) throws Exception;
+    public abstract void regenerateResourcePack(CommandSender sender) throws Exception;
 
     /**
      * Start a small http server to serve the resource pack.
